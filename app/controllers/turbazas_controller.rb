@@ -1,0 +1,2 @@
+class TurbazasController < ApplicationController
+end

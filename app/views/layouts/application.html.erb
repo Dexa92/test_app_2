@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TestApp2</title>
+  <title>TestApp</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="container">
+
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <%= link_to "Главная", root_path %>
+      <nav>
+        <ul class="nav pull-right">
+          <!--<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>-->
+          <li><%= link_to "Страны", '#' %></li>
+          <li><%= link_to "Регионы", '#' %></li>
+          <li><%= link_to "Города", '#' %></li>
+          <li><%= link_to "Турбазы", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-3 no-padding">
+        Показать количество турбаз в
+      </div>
+      <div class="col-md-3">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Выбрать
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="filter">
+            <li><a href="#">Стране</a></li>
+            <li><a href="#">Регионе</a></li>
+            <li><a href="#">Городе</a></li>
+            <li><a href="#">Все</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-default">Показать</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= yield %>
 
