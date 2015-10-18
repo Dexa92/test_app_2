@@ -1,0 +1,19 @@
+<button class="btn btn-default">
+  <%= link_to "Добавить", new_country_path %>
+</button>
+
+<table>
+  <% @countries.each do|country| %>
+  <tr>
+    <td>
+      <%= country.name %>
+    </td>
+    <td>
+        <%= link_to "Изменить", edit_country_path(country) %>
+    </td>
+    <td>
+      <%= link_to "Удалить", country, method: :delete %>
+    </td>
+    <% end %>
+  </tr>
+</table>
