@@ -1,0 +1,23 @@
+<button class="btn btn-default">
+  <%= link_to "Добавить", new_city_path %>
+</button>
+
+<table>
+  <% @cities.each do|city| %>
+      <tr>
+        <td>
+          <%= city.name %>
+        </td>
+        <td>
+          <%= city.region_id %>
+        </td>
+        <td>
+          <%= link_to "Edit", edit_city_path(city) %>
+        </td>
+        <td>
+          <%= link_to "Delete", city, method: :delete %>
+        </td>
+  <% end %>
+  </tr>
+</table>
+

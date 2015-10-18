@@ -1,0 +1,23 @@
+<button class="btn btn-default">
+  <%= link_to "Добавить", new_turbaza_path %>
+</button>
+
+<table>
+  <% @turbazas.each do|turbaza| %>
+      <tr>
+        <td>
+          <%= turbaza.name %>
+        </td>
+        <td>
+          <%= turbaza.city_id %>
+        </td>
+        <td>
+          <%= link_to "Edit", edit_turbaza_path(turbaza) %>
+        </td>
+        <td>
+          <%= link_to "Delete", turbaza, method: :delete %>
+        </td>
+  <% end %>
+  </tr>
+</table>
+

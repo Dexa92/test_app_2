@@ -1,0 +1,23 @@
+<button class="btn btn-default">
+  <%= link_to "Добавить", new_region_path %>
+</button>
+
+<table>
+  <% @regions.each do|region| %>
+      <tr>
+        <td>
+          <%= region.name %>
+        </td>
+        <td>
+          <%= region.country_id %>
+        </td>
+        <td>
+          <%= link_to "Edit", edit_region_path(region) %>
+        </td>
+        <td>
+          <%= link_to "Delete", region, method: :delete %>
+        </td>
+  <% end %>
+  </tr>
+</table>
+
