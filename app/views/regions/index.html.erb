@@ -1,5 +1,7 @@
+<h1>List of regions</h1>
+
 <button class="btn btn-default">
-  <%= link_to "Добавить", new_region_path %>
+  <%= link_to "Add", new_region_path %>
 </button>
 
 <table>
@@ -21,3 +23,4 @@
   </tr>
 </table>
 
+<%= will_paginate @regions%>

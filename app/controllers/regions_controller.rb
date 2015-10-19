@@ -5,7 +5,7 @@ class RegionsController < ApplicationController
   end
 
   def index
-    @regions = Region.all
+    @regions = Region.paginate(:page => params[:page], :per_page => 20)
   end
 
   def new
@@ -28,7 +28,7 @@ class RegionsController < ApplicationController
   def update
     @region = Region.find(params[:id])
     if @region.update_attributes(region_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Region updated"
       redirect_to @region
     else
       render 'edit'

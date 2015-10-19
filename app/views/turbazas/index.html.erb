@@ -1,5 +1,7 @@
+<h1>List of turbazas</h1>
+
 <button class="btn btn-default">
-  <%= link_to "Добавить", new_turbaza_path %>
+  <%= link_to "Add", new_turbaza_path %>
 </button>
 
 <table>
@@ -21,13 +23,8 @@
   </tr>
 </table>
 
-<table>
-  <% @countries.each do|country| %>
-  <tr>
-    <td>
-      <% country.name %>(<% country.turbazas.count %>)
-    </td>
-  </tr>
-      <% end %>
-</table>
+
+<%= will_paginate @turbazas%>
+
+
 

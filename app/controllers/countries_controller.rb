@@ -5,7 +5,7 @@ class CountriesController < ApplicationController
   end
 
   def index
-    @countries = Country.paginate(page: params[:page])
+    @countries = Country.paginate(:page => params[:page], :per_page => 20)
   end
 
   def new
@@ -28,7 +28,7 @@ class CountriesController < ApplicationController
   def update
     @country = Country.find(params[:id])
     if @country.update_attributes(country_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Country updated"
       redirect_to @country
     else
       render 'edit'

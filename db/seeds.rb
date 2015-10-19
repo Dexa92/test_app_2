@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-11.times do |i|
-  21.times do|j|
-    Turbaza.create(name: "Turbaza ##{j}", city_id: "#{i}")
+3.times do |i|
+ 2.times do|j|
+    City.create(name: "City ##{j}", region_id: "#{i}")
   end
 end

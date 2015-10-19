@@ -1,5 +1,7 @@
+<h1>List of countries</h1>
+
 <button class="btn btn-default">
-  <%= link_to "Добавить", new_country_path %>
+  <%= link_to "Add", new_country_path %>
 </button>
 
 <table>
@@ -18,4 +20,4 @@
   </tr>
 </table>
 
-<!--<= will_paginate @countries %>-->
+<%= will_paginate @countries %>

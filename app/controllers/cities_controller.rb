@@ -5,7 +5,7 @@ class CitiesController < ApplicationController
   end
 
   def index
-    @cities = City.all
+    @cities = City.paginate(:page => params[:page], :per_page => 20)
   end
 
   def new
@@ -28,7 +28,7 @@ class CitiesController < ApplicationController
   def update
     @city = City.find(params[:id])
     if @city.update_attributes(city_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "City updated"
       redirect_to @city
     else
       render 'edit'

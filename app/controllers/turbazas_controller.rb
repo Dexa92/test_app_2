@@ -5,10 +5,8 @@ class TurbazasController < ApplicationController
     end
 
     def index
-      @turbazas = Turbaza.all
+      @turbazas = Turbaza.paginate(:page => params[:page], :per_page => 20)
       @countries = Country.all
-      @regions = Region.all
-      @cities = City.all
     end
 
     def new
@@ -31,7 +29,7 @@ class TurbazasController < ApplicationController
     def update
       @turbaza = Turbaza.find(params[:id])
       if @turbaza.update_attributes(turbaza_params)
-        flash[:success] = "Profile updated"
+        flash[:success] = "Turbaza updated"
         redirect_to @turbaza
       else
         render 'edit'

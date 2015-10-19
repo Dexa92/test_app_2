@@ -3,3 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
 TestApp2::Application.initialize!
+
+require 'rubygems'
+
+gem 'will_paginate'

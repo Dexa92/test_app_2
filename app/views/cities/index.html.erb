@@ -1,5 +1,7 @@
+<h1>List of cities</h1>
+
 <button class="btn btn-default">
-  <%= link_to "Добавить", new_city_path %>
+  <%= link_to "Add", new_city_path %>
 </button>
 
 <table>
@@ -20,4 +22,6 @@
   <% end %>
   </tr>
 </table>
+
+<%= will_paginate @cities%>
 

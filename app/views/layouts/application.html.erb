@@ -11,99 +11,32 @@
 
 <div class="container">
 
-  <!--<header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="navbar-inner">
-      <div class="container">
-        <= link_to "sample app", root_path, id: "logo" %>
-        <nav>
-          <ul class="nav pull-right">
-            <li><= link_to "Home", root_path %></li>
-            <li><= link_to "Help", help_path %></li>
-            < if signed_in? %>
-                <li><= link_to "Users", '#' %></li>
-                <li id="fat-menu" class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Account <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><= link_to "Profile", current_user %></li>
-                    <li><= link_to "Settings", '#' %></li>
-                    <li class="divider"></li>
-                    <li>
-                      <= link_to "Sign out", signout_path, method: "delete" %>
-                    </li>
-                  </ul>
-                </li>
-            < else %>
-                <li>  "Sign in", signin_path %></li>
-            < end %>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>-->
-
   <header>
       <div class="col-md-12 no-padding">
         <div class="col-md-6">
-          <%= link_to "Главная", root_path %>
+          <%= link_to "Main", root_path %>
         </div>
         <div class="col-md-6 text-right">
           <div class="col-md-3">
-            <%= link_to "Страны", countries_path %>
+            <%= link_to "Countries", countries_path %>
           </div>
           <div class="col-md-3">
-            <%= link_to "Регионы", regions_path %>
+            <%= link_to "Regions", regions_path %>
           </div>
           <div class="col-md-3">
-            <%= link_to "Города", cities_path %>
+            <%= link_to "Cities", cities_path %>
           </div>
           <div class="col-md-3">
-            <%= link_to "Турбазы", turbazas_path %>
+            <%= link_to "Turbazas", turbazas_path %>
           </div>
         </div>
       </div>
   </header>
-
-  <!--<div class="row">
-    <div class="col-md-12">
-      <div class="col-md-3 no-padding">
-        Показать количество турбаз в
-      </div>
-      <div class="col-md-3">
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Выбрать
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="filter">
-            <li><a href="#">Стране</a></li>
-            <li><a href="#">Регионе</a></li>
-            <li><a href="#">Городе</a></li>
-            <li><a href="#">Все</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <button class="btn btn-default">Показать</button>
-      </div>
-    </div>
-  </div>-->
-  <!--<ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">One more separated link</a></li>
-  </ul>-->
 </div>
 <div class="container">
   <%= yield %>
 </div>
 
-<%= debug(params) if Rails.env.development? %>
 
 </body>
 </html>
