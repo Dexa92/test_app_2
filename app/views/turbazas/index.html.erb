@@ -21,3 +21,13 @@
   </tr>
 </table>
 
+<table>
+  <% @countries.each do|country| %>
+  <tr>
+    <td>
+      <% country.name %>(<% country.turbazas.count %>)
+    </td>
+  </tr>
+      <% end %>
+</table>
+

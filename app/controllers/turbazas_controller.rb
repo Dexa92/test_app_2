@@ -6,6 +6,9 @@ class TurbazasController < ApplicationController
 
     def index
       @turbazas = Turbaza.all
+      @countries = Country.all
+      @regions = Region.all
+      @cities = City.all
     end
 
     def new
