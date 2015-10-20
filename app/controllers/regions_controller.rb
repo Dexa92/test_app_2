@@ -5,7 +5,7 @@ class RegionsController < ApplicationController
   end
 
   def index
-    @regions = Region.paginate(:page => params[:page], :per_page => 20)
+    @regions = Region.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new

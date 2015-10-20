@@ -5,7 +5,7 @@ class TurbazasController < ApplicationController
     end
 
     def index
-      @turbazas = Turbaza.paginate(:page => params[:page], :per_page => 20)
+      @turbazas = Turbaza.paginate(:page => params[:page], :per_page => 10)
       @countries = Country.all
     end
 

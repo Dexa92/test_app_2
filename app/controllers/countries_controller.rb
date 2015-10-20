@@ -5,7 +5,7 @@ class CountriesController < ApplicationController
   end
 
   def index
-    @countries = Country.paginate(:page => params[:page], :per_page => 20)
+    @countries = Country.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
