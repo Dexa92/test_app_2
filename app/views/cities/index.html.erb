@@ -10,8 +10,11 @@
         <td>
           <%= city.name %>
         </td>
-        <td>
-          <%= city.region_id %>
+        <td><%if city.region_id == 0 %>
+          <%= Region.find(city.region_id + 1).name %>
+          <% else %>
+              <%= Region.find(city.region_id).name %>
+          <% end %>
         </td>
         <td>
           <%= link_to "Edit", edit_city_path(city) %>

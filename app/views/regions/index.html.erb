@@ -11,7 +11,11 @@
           <%= region.name %>
         </td>
         <td>
-          <%= region.country_id %>
+          <%if region.country_id == 0 %>
+              <%= Country.find(region.country_id + 1).name %>
+          <% else %>
+              <%= Country.find(region.country_id).name %>
+          <% end %>
         </td>
         <td>
           <%= link_to "Edit", edit_region_path(region) %>
